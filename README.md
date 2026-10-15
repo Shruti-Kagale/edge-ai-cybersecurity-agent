@@ -158,10 +158,17 @@ For the web dashboard, open `src/index.html` in your browser.
 
 ### 📸 Screenshots
 
-<!-- Add your screenshots to a docs/ folder and replace the paths below -->
-| Streamlit Dashboard | SOC Web Dashboard |
+#### Streamlit Dashboard
+| | |
 |---|---|
-| ![Streamlit dashboard](docs/streamlit-dashboard.png) | ![SOC dashboard](docs/soc-dashboard.png) |
+| ![Streamlit dashboard 1](docs/streamlit-dashboard1.png) | ![Streamlit dashboard 2](docs/streamlit-dashboard2.png) |
+| ![Streamlit dashboard 3](docs/streamlit-dashboard3.png) | ![Streamlit dashboard 4](docs/streamlit-dashboard4.png) |
+
+#### SOC Web Dashboard
+| | |
+|---|---|
+| ![SOC dashboard 1](docs/soc-dashboard1.png) | ![SOC dashboard 2](docs/soc-dashboard2.png) |
+| ![SOC dashboard 3](docs/soc-dashboard3.png) | ![SOC dashboard 4](docs/soc-dashboard4.png) |
 
 ---
 
