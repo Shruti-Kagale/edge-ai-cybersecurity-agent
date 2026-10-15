@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Edge AI Cybersecurity SOC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <div class="sidebar">
+    <h2>SOC Control Panel</h2>
+    <div class="field">
+      <label>System Mode</label>
+      <select id="modeSelect">
+        <option value="live">Live Monitoring</option>
+        <option value="attack" selected>Attack Simulation</option>
+      </select>
+    </div>
+    <hr class="divider">
+    <div class="sidebar-stat">
+      <div class="label">System Status</div>
+      <div class="value"><span class="dot"></span>ACTIVE</div>
+    </div>
+    <div class="sidebar-stat">
+      <div class="label">Latency</div>
+      <div class="value">LOW</div>
+    </div>
+    <div class="sidebar-stat">
+      <div class="label">Security Level</div>
+      <div class="value" style="font-size:14px;">EDGE PROTECTED</div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="header">
+      <h1>Edge AI Cybersecurity SOC</h1>
+      <div class="sub">Real-Time Intrusion Detection &amp; Monitoring System</div>
+    </div>
+    <div class="pulse"><span class="pulse-dot"></span> LIVE SYSTEM MONITORING</div>
+
+    <div class="metrics">
+      <div class="metric attacks">
+        <div class="label">Total Attacks</div>
+        <div class="value" id="attackCount">0</div>
+      </div>
+      <div class="metric normal">
+        <div class="label">Normal Traffic</div>
+        <div class="value" id="normalCount">0</div>
+      </div>
+      <div class="metric">
+        <div class="label">Total Packets</div>
+        <div class="value" id="totalCount">0</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="primary" id="startBtn">Start SOC Monitoring</button>
+      <span class="toast" id="runToast"></span>
+    </div>
+
+    <div class="row">
+      <div class="panel">
+        <div class="panel-head">
+          <h3>Live Threat Alerts</h3>
+          <span class="meta" id="alertMeta">last 25 events</span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th style="width:22%">Time</th>
+              <th style="width:26%">Type</th>
+              <th style="width:26%">Port</th>
+              <th style="width:26%">Severity</th>
+            </tr>
+          </thead>
+        </table>
+        <div style="max-height:340px; overflow-y:auto;">
+          <table><tbody id="logBody"></tbody></table>
+        </div>
+        <div class="log-actions">
+          <button id="saveLogBtn">Save Log</button>
+          <button id="downloadLogBtn">Download Log (CSV)</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h3>Traffic Distribution</h3>
+          <span class="meta">Network traffic split</span>
+        </div>
+        <canvas id="pieChart" height="180"></canvas>
+        <div class="legend">
+          <span><span class="swatch" style="background:var(--high)"></span>Attack</span>
+          <span><span class="swatch" style="background:var(--low)"></span>Normal</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Port Activity Monitor</h3>
+        <span class="meta">Real-time port activity trend</span>
+      </div>
+      <canvas id="portChart" height="140"></canvas>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
